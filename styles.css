@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 :root{
-    --space-cadet: #273469;
-    --space-cadet-dark: #1e2749;
-    --lavender-blue: #e4d9ff;
+    --space-cadet: rgba(255,255,255,0.1);
+    --space-cadet-dark: rgba(0,0,0,1);
+    --lavender-blue: rgba(255,255,255,0.1);
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 body{
     line-height: 1.6;
     background: var(--space-cadet-dark);
     font-size: 1.05rem;
+    color: white;
 }
 .center{
     display: flex;
@@ -27,7 +28,7 @@ body{
 .bill-divider-wrapper{
     max-width: 1080px;
     margin: 0 auto;
-    background: #fff;
+    background: rgba(255,255,255,0.1);
     overflow: hidden;
 }
 .title{
@@ -44,6 +45,7 @@ body{
 }
 .bill-inputs{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: white;
 }
 .form-group{
     padding: 0.5rem 0;
@@ -58,7 +60,8 @@ body{
     font-size: 1rem;
     padding: 0.5rem;
     border: none;
-    border-bottom: 1.5px solid var(--lavender-blue);
+    background: transparent;
+    border-bottom: 1.5px solid white;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -69,11 +72,11 @@ body{
     outline: 0;
     border-color: var(--space-cadet);
 }
-#calc-btn{
+#calc-btn, #reset-btn{
     padding: 0.9rem 2.2rem;
     font-size: 1.05rem;
     text-transform: uppercase;
-    display: block;
+    display: inline-block;
     margin-top: 1.25rem;
     background:var(--space-cadet-dark);
     color: #fff;
@@ -85,11 +88,15 @@ body{
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
 }
-#calc-btn:focus{
+
+#calc-btn:focus, #reset-btn:focus{
     outline: 0;
 }
-#calc-btn:hover{
+#calc-btn:hover, #reset-btn:hover{
     background: var(--space-cadet);
+}
+#reset-btn{
+    display: inline-block;
 }
 .text-group{
     display: flex;

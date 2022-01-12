@@ -9,7 +9,7 @@ function billDividerHandler(event){
     showCalculatedOutput(inputs);
 }
 
-// get all the inputs for the bill divider
+// Get all the inputs for the bill divider
 function getInputs(){
     let subtotal = document.getElementById('subtotal').value;
     let tipPercent = document.getElementById('tip').value;
@@ -17,7 +17,7 @@ function getInputs(){
     return {subtotal, tipPercent, noOfPerson};
 }
 
-//calculate the bill divider info
+//Calculate the bill divider info
 function showCalculatedOutput(input){
     billDivideForm.reset();
 
@@ -25,7 +25,6 @@ function showCalculatedOutput(input){
     let totalAmount = parseFloat(input.subtotal) + totalTip;
     let tipPerPerson = totalTip / parseFloat(input.noOfPerson);
     let billPerPerson = totalAmount / parseFloat(input.noOfPerson);
-    // console.log(totalTip, totalAmount, tipPerPerson, billPerPerson);
 
     document.getElementById('total-bill').innerHTML = `$ ${totalAmount.toFixed(2)}`;
     document.getElementById('bill-per-person').innerHTML = `$ ${billPerPerson.toFixed(2)}`;
